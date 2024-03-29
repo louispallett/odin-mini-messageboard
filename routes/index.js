@@ -1,4 +1,4 @@
-const formatDate = require("../public/javascripts/format-date")
+const formatDate = require("../public/javascripts/format-date");
 
 const express = require('express');
 const router = express.Router();
@@ -19,10 +19,6 @@ const messages = [
 /* GET home page. */
 router.get('/', (req, res, next) => {
   res.render('index', { title: 'Mini Messageboard', messages: messages });
-});
-
-router.get("/new", (req, res, next) => {
-  res.render("form", { title: "New Message" })
 });
 
 router.post("/new", (req, res) => {
