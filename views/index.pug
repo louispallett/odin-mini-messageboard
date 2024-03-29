@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title} by LowPal
+
+  each item in messages 
+    div(class="message")
+      p #{item.text}
+      div
+        p by 
+          b #{item.user}
+        p on #{item.added}
+  a(href="new")
+    button New Message
